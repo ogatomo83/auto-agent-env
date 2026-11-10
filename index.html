@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research Notes</title>
+<link rel="stylesheet" href="viewer/style.css">
+</head>
+<body>
+<div id="progress"></div>
+<header class="topbar">
+  <button id="menuBtn" class="iconbtn" aria-label="メニュー">☰</button>
+  <div class="brand" id="brand">Research Notes</div>
+  <div class="search">
+    <input id="q" type="search" placeholder="本文を検索（/）" autocomplete="off">
+    <span id="qcount"></span>
+  </div>
+  <span id="live" class="live" title="ライブ更新">●</span>
+  <button id="themeBtn" class="iconbtn" aria-label="テーマ切替">◐</button>
+</header>
+<div class="layout">
+  <nav id="sidebar">
+    <section>
+      <h4>ドキュメント</h4>
+      <ul id="docs"></ul>
+    </section>
+    <section>
+      <h4>目次</h4>
+      <ul id="toc"></ul>
+    </section>
+  </nav>
+  <main>
+    <article id="doc"><p class="muted">読み込み中…</p></article>
+  </main>
+</div>
+<div id="pop" role="tooltip" hidden></div>
+<div id="scrim" hidden></div>
+<script src="viewer/parser.js"></script>
+<script src="viewer/app.js"></script>
+</body>
+</html>
